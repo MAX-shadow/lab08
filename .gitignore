@@ -1,0 +1,7 @@
+_build/
+_builds/
+_build_lin/
+*.deb
+*.rpm
+*.tar.gz
+*.zip
