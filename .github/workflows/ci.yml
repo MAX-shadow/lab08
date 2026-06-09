@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  docker:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build docker image
+        run: docker build -t logger .
+
+      - name: Run logger container
+        run: |
+          mkdir -p logs
+          printf "1000\n50\n3000\n" | docker run -i --rm -v "$(pwd)/logs:/home/logs" logger
+          echo "--- log.txt ---"
+          cat logs/log.txt
