@@ -26,7 +26,7 @@ $ source scripts/activate
 ```
 
 ```sh
-$ git clone https://github.com/${GITHUB_USERNAME}/lab07 lab08
+$ git clone https://github.com/${GITHUB_USERNAME}/lab08 lab08
 $ cd lab08
 $ git submodule update --init
 $ git remote remove origin
@@ -118,7 +118,7 @@ $ cat logs/log.txt
 ```
 
 ```sh
-$ gsed -i 's/lab07/lab08/g' README.md
+$ gsed -i 's/lab08/lab08/g' README.md
 ```
 
 ```sh
